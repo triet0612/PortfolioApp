@@ -1,9 +1,4 @@
-import { ScrollView, StyleSheet, View, Image, Text, Dimensions } from "react-native";
-
-/**
- * @constant {number}
- */
-const screenHeight = Dimensions.get('window').height
+import { StyleSheet, View, Image, Text } from "react-native";
 
 /**
  * View for profile picture
@@ -11,15 +6,15 @@ const screenHeight = Dimensions.get('window').height
  */
 const ProfilePic = () => {
     return (
-        <View style={portfolioStyle.Container}>
+        <View style={profileStyle.Container}>
             <Image 
                 source={require('../assets/IMG_1361.jpg')}
-                style={portfolioStyle.ProfileImage}
+                style={profileStyle.ProfileImage}
             />
-            <View style={portfolioStyle.ProfileParagraph}>
-                <Text style={portfolioStyle.ProfileText}>Sinh viên:</Text>
-                <Text style={portfolioStyle.ProfileText}>Đặng Minh Triết</Text>
-                <Text style={portfolioStyle.ProfileText}>MSSV: 21125096</Text>
+            <View style={profileStyle.ProfileParagraph}>
+                <Text style={profileStyle.ProfileText}>Sinh viên:</Text>
+                <Text style={profileStyle.ProfileText}>Đặng Minh Triết</Text>
+                <Text style={profileStyle.ProfileText}>MSSV: 21125096</Text>
                 <Image
                     source={require('../assets/logo-apcs.png')}
                     style={{resizeMode: 'contain', width: 'auto', flex: 3}}/>
@@ -28,26 +23,25 @@ const ProfilePic = () => {
     )
 }
 
-const portfolioStyle = StyleSheet.create({
+/**
+ * @constant {StyleSheet}
+ */
+const profileStyle = StyleSheet.create({
     Container: {
-        margin: 10,
-        borderRadius: 20,
-        height: screenHeight / 3.5,
-        padding: 20,
-        flexDirection: 'row',
+        margin: 10, padding: 20, borderRadius: 20,
         backgroundColor: '#242526',
+        flexDirection: 'row',
+        flex: 0.3,
     },
     ProfileImage: {
-        flex: 1,
         borderRadius: 20,
-        height: 'auto',
-        resizeMode: 'cover',
+        height: 'auto', resizeMode: 'cover',
+        flex: 1,
     },
     ProfileParagraph: {
-        flex: 1,
         paddingLeft: 20,
         color: 'white',
-        flexDirection: "column"
+        flexDirection: "column", flex: 1,
     },
     ProfileText: {
         fontFamily: 'monospace',

@@ -11,7 +11,7 @@ import Portfolio from './components/Portfolio';
  */
 export default function App() {
     return (
-        <SafeAreaView style={{backgroundColor: 'pink'}}>
+        <SafeAreaView style={{backgroundColor: 'darkorchid', flex: 1}}>
             <StatusBar style={mainPageStyle.topbar} />
             <Portfolio/>
         </SafeAreaView>
@@ -20,7 +20,7 @@ export default function App() {
 
 /**
  * Style for main page
- * @param {StyleSheet}
+ * @constant {StyleSheet}
  */
 const mainPageStyle = StyleSheet.create({
     topbar: {

@@ -1,13 +1,19 @@
 import { View } from "react-native";
 
 import ProfilePic from './ProfilePic';
-import Academic from "./Academic";
+import Bio from "./Bio";
+import Communication from "./Communication";
 
+/**
+ * Portfolio component
+ * @returns {React.JSX.Element}
+ */
 const Portfolio = () => {
     return (
-        <View>
+        <View style={{flexDirection: 'column', flex: 1}}>
             <ProfilePic/>
-            <Academic/>
+            <Bio/>
+            <Communication/>
         </View>
     );
 }
